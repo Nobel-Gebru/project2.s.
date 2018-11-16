@@ -10,5 +10,7 @@
 .text
 	main:
 	
-		li $v0, 8 #read in integer
-		
+		li $v0, 8
+		la $a0, str
+		li $a1, 65
+		syscall
