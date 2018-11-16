@@ -1,0 +1,5 @@
+.data
+	str: .space 10
+	newLine: .asciiz "\n"
+	tooLongMessage: .asciiz "Input is too long."
+	notInRange: .asciiz "Invalid base-N number."
