@@ -3,3 +3,12 @@
 	newLine: .asciiz "\n"
 	tooLongMessage: .asciiz "Input is too long."
 	notInRange: .asciiz "Invalid base-N number."
+	emptyInput: .asciiz "Input is empty."
+
+.globl main
+
+.text
+	main:
+	
+		li $v0, 8 #read in integer
+		
