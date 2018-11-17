@@ -127,3 +127,28 @@ addi $t1, $t1, -87
 Number:
 	addi $t1, $t1, -48 	
 	j multiply
+emptyInput_Error:
+	la $a0, emptyInput 
+	li $v0, 4 
+	syscall
+
+	li $v0,10 
+	syscall
+
+LongMessage_Error:
+	la $a0, LongMessage
+	li $v0, 4 		
+	syscall
+
+	li $v0,10 
+	syscall
+
+Invalid_Range_Error:
+	la $a0, invalidRange #
+	li $v0, 4 
+	syscall
+
+	li $v0,10 #
+	syscall	 
+
+	jr $ra	
