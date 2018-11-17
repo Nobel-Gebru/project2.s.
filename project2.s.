@@ -66,3 +66,9 @@ callLength:
 	beq $t1, 10, counter
 	beq $t1, 0, counter
 	beq $t1, 32, counter
+	beq $t3, 4, LongMessage_Error
+	j callLength
+	
+counter:
+	sub $t0, $t0, $t3
+	sub $t3, $t3, $t4
