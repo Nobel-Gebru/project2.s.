@@ -49,8 +49,8 @@ main:
 	j spaces_or_chars
 
 restart_program:
-	sub $t0, $t0, $t3 	
-	la $t3, 0 			#
+	sub $t0, $t0, $t3 
+	la $t3, 0 			
 
 goForward:
 	lb $t1,0($t0)
@@ -61,3 +61,8 @@ addi $t0, $t0, -1
 
 callLength:
 	lb $t1, ($t0)
+	addi $t0, $t0, 1
+	addi $t3, $t3, 1 
+	beq $t1, 10, counter
+	beq $t1, 0, counter
+	beq $t1, 32, counter
