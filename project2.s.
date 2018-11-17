@@ -38,6 +38,12 @@ main:
 	beq $t1, 10, restart_program
 	beq $t1, 0, restart_program
 	bne $t1, 32, displayChar
+	syscall
+	li $v0,10  
+	syscall
+	
+ASCII_conversion:
+	blt $t1, 48, Invalid_Range_Error
 	
 	spaces_or_chars:
 	lb $t1,0($t0)
