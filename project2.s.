@@ -84,9 +84,9 @@ findExponent:
 
 multiply:
 	mult $t1, $t4
-mflo $t5			#sub_sum
-	add $t6, $t6, $t5 	#final sum
+	mflo $t5			
+	add $t6, $t6, $t5 
 	
 	beq $t4, 1, Exit
-	div $t4, $s0 #dividing t4 to the next power of base
+	div $t4, $s0 
 	mflo $t4
