@@ -1,16 +1,13 @@
 .data
-	str: .space 10
-	newLine: .asciiz "\n"
-	tooLongMessage: .asciiz "Input is too long."
-	notInRange: .asciiz "Invalid base-34 number."
-	emptyInput: .asciiz "Input is empty."
-
-.globl main
+	LongMessage: .asciiz "Input is too long."# print too long
+	invalidRange: .asciiz "Invalid base-34 number."# print invalid number
+	emptyInput: .asciiz "Input is empty."# print input is empty
+	spaceString: .space 10000# allocate memory to string
 
 .text
-	main:
-	
-		li $v0, 8
-		la $a0, str
-		li $a1, 65
-		syscall
+
+main:
+	li $v0, 8  # assign a user input
+	la $a0, spaceString
+	li $a1, 10000
+	syscall
