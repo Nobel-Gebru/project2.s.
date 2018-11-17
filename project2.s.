@@ -47,3 +47,10 @@ main:
 	beq $t1, 0, restart_program
 	bne $t1, 32, Invalid_Range_Error
 	j spaces_or_chars
+
+restart_program:
+	sub $t0, $t0, $t3 	
+	la $t3, 0 			#restaring the counter
+
+go_foward:
+	lb $t1,0($t0)
