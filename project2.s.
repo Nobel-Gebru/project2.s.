@@ -24,14 +24,14 @@ main:
 	addi $t4, $0, 1 	
 	addi $t5, $0, 0 	
 	
-	jump_spaces:
+jump_spaces:
 	lb $t1,0($t0) #sends register t1 value to t0
 	addi $t0, $t0, 1
 	addi $t3, $t3, 1
 	beq $t1, 32, jump_spaces # if the value of t1 is 32 call jump_spaces
 	beq $t1, $0, emptyInput_Error
 
-	displayChar:
+displayChar:
 	lb $t1,0($t0)
 	addi $t0, $t0, 1
 	addi $t3, $t3, 1
@@ -42,10 +42,8 @@ main:
 	li $v0,10  
 	syscall
 	
-ASCII_conversion:
-	blt $t1, 48, Invalid_Range_Error
 	
-	spaces_or_chars:
+spaces_or_chars:
 	lb $t1,0($t0)
 	addi $t0, $t0, 1
 	addi $t3, $t3, 1
