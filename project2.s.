@@ -121,3 +121,9 @@ Upper_Case:
 	j multiply 			
 
 Lower_Case:
+addi $t1, $t1, -87 	
+	j multiply				
+
+Number:
+	addi $t1, $t1, -48 	
+	j multiply
